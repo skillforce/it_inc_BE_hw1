@@ -4,7 +4,7 @@ config(); // добавление переменных из файла .env в p
 export const SETTINGS = {
     PORT: process.env.PORT || 3003,
       PATH: {
-        VIDEOS: '/videos/api',
-        TESTING: '/testing/api',
+        VIDEOS: '/api/videos',
+        TESTING: '/api/testing',
     },
 }
