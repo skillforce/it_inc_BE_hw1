@@ -2,7 +2,6 @@ import express from 'express'
 import cors from 'cors'
 import { SETTINGS } from "./settings";
 import { videoRouter } from "./videos";
-import { setDB } from "./db/db";
 import { testingRouter } from "./testing/router/testingRouter";
 
 export const app = express()
