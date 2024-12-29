@@ -46,4 +46,6 @@ export const videoMinAgeRestrictionBodyFieldValidationMiddleware = body('minAgeR
 
 export const videoPublicationDateBodyFieldValidationMiddleware = body('publicationDate')
     .optional({ nullable: true })
+    .isString().withMessage('publicationDate must be an ISO date')
+    .bail()
     .isISO8601().withMessage('publicationDate must be an ISO date')
