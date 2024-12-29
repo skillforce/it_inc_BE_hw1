@@ -7,10 +7,8 @@ const validResolutions = Object.values(AvailableResolutions);
 
 
 
-
-
 export const videoTitleBodyFieldValidationMiddleware = body('title')
-    .exists().withMessage('title field is required')
+    .exists({checkFalsy: true}).withMessage('title field is required')
     .bail()
     .trim()
     .notEmpty().withMessage('title field is required')
