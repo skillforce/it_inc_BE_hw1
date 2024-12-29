@@ -11,6 +11,7 @@ const validResolutions = Object.values(AvailableResolutions);
 
 export const videoTitleBodyFieldValidationMiddleware = body('title')
     .exists().withMessage('title field is required')
+    .bail()
     .trim()
     .notEmpty().withMessage('title field is required')
     .isLength({min:1, max:40 }).withMessage('title should be between 1 and 30 symbols');
